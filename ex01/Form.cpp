@@ -32,6 +32,10 @@ const int &					Form::getGradeExec() const {
 
 }
 
-std::ostream						operator<<(std::ostream & os, const Form & obj) {
+void						Form::beSigned(){
 	
+}
+
+std::ostream						operator<<(std::ostream & os, const Form & obj) {
+
 }
