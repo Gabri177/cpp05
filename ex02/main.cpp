@@ -1,20 +1,32 @@
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
 
-int main(){
+#include "Bureaucrat.hpp"
+#include "AForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
-	Bureaucrat obj("test", 5);
-	AForm	f1("Form1", 5, 6);
-	AForm	f2("Form2", 5, 6);
+int	main()
+{
+		Bureaucrat b("test", 20);
+		ShrubberyCreationForm f1("11111111111111");
+		RobotomyRequestForm f2("2222222222222");
+		PresidentialPardonForm f3("333333333333");
 
-	// std::cout << f1;
-	std::cout << obj;
-	obj.signForm(f1);
-	obj.downGrade();
-	std::cout << obj;
-	obj.signForm(f2);
-	// std::cout << f1;
+		b.signForm(f1);
+		b.executeForm(f1);
 
-	return 0;
+		std::cout << f1 << std::endl;
+		
+		b.signForm(f2);
+		b.executeForm(f2);
+		
+		std::cout << f2 << std::endl;
+		
+		b.signForm(f3);
+		b.executeForm(f3);
+		
+		std::cout << f3 << std::endl;
+
 }
-

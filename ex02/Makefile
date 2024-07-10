@@ -1,6 +1,5 @@
-CFILE = AForm.cpp AForm.hpp Bureaucrat.cpp Bureaucrat.hpp Makefile PresidentialPardonForm.cpp \
-		PresidentialPardonForm.hpp RobotomyRequestForm.cpp RobotomyRequestForm.hpp \
-		ShrubberyCreationForm.cpp ShrubberyCreationForm.hpp main.cpp
+CFILE = AForm.cpp Bureaucrat.cpp PresidentialPardonForm.cpp  RobotomyRequestForm.cpp \
+		ShrubberyCreationForm.cpp main.cpp
 OFILE = $(CFILE:.cpp=.o)
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = Test
