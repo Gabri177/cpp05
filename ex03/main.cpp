@@ -6,27 +6,29 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
 
 int	main()
 {
-		Bureaucrat b("test", 20);
-		ShrubberyCreationForm f1("11111111111111");
-		RobotomyRequestForm f2("2222222222222");
-		PresidentialPardonForm f3("333333333333");
+		Intern jajaja;
+		Bureaucrat ts("test", 20);
+		AForm* A = jajaja.makeForm("presidential request", "11111111111");
+		AForm* B = jajaja.makeForm("robotomy request", "2222222222");
+		AForm* C = jajaja.makeForm("shrubberyCreation request", "3333333333333");
 
-		b.signForm(f1);
-		b.executeForm(f1);
+		ts.signForm(*A);
+		ts.executeForm(*A);
 
-		std::cout << f1 << std::endl;
+		std::cout << *A << std::endl;
 		
-		b.signForm(f2);
-		b.executeForm(f2);
+		ts.signForm(*B);
+		ts.executeForm(*B);
 		
-		std::cout << f2 << std::endl;
+		std::cout << *B << std::endl;
 		
-		b.signForm(f3);
-		b.executeForm(f3);
+		ts.signForm(*C);
+		ts.executeForm(*C);
 		
-		std::cout << f3 << std::endl;
+		std::cout << *C << std::endl;
 
 }
