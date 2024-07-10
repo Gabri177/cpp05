@@ -2,7 +2,10 @@
 # define HEAD_BUR_HPP
 # include <string>
 # include <iostream>
+# include "Form.hpp"
 
+
+class Form;
 class Bureaucrat {
 
     private:
@@ -19,22 +22,19 @@ class Bureaucrat {
         int                             getGrade() const;
         void                            upGrade();
         void                            downGrade();
+        void                            signForm(Form & obj) const;
 
 
         class GradeTooHighException : public std::exception {
 
             public:
-                const char* what() const throw() {
-                    return "Grade is too high!";
-                }
+                const char* what() const throw();
         };
 
         class GradeTooLowException : public std::exception {
 
             public:
-                const char* what() const throw() {
-                    return "Grade is too low!";
-                }
+                const char* what() const throw();
         };
 };
 

@@ -5,7 +5,7 @@ int main(){
 	Bureaucrat obj("test", 150);
 
 	try{
-		obj.upGrade();
+		obj.downGrade();
 	}catch(std::exception & e){
 		std::cout << e.what() << std::endl;
 	}

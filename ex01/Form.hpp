@@ -1,8 +1,10 @@
 #ifndef HEAD_FOR_HPP
 # define HEAD_FOR_HPP
+# include "Bureaucrat.hpp"
 # include <iostream>
 # include <string>
 
+class Bureaucrat;
 
 class Form {
 
@@ -14,6 +16,7 @@ class Form {
 	
 	public:
 									Form();
+									Form(const std::string & name, int gradeSign, int gradeExec);
 									Form(const Form & obj);
 		Form &						operator=(const Form & obj);
 									~Form();
@@ -21,7 +24,7 @@ class Form {
 		const bool &				getIsSigned() const;
 		const int &					getGradeSign() const;
 		const int &					getGradeExec() const;
-		void						beSigned();
+		void						beSigned(const Bureaucrat & boss);
 
 		class GradeTooHighException : public std::exception {
 
@@ -41,6 +44,6 @@ class Form {
 
 };
 
-std::ostream						operator<<(std::ostream & os, const Form & obj);
+std::ostream &						operator<<(std::ostream & os, const Form & obj);
 
 #endif
