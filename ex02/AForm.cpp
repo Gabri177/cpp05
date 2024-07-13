@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   AForm.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yugao <yugao@student.42madrid.com>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/13 09:50:38 by yugao             #+#    #+#             */
+/*   Updated: 2024/07/13 11:50:33 by yugao            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 # include "AForm.hpp"
 
 AForm::AForm(): _name("unKnow"), _isSigned(false), _gradeSign(150), _gradeExec(150){
@@ -6,6 +18,10 @@ AForm::AForm(): _name("unKnow"), _isSigned(false), _gradeSign(150), _gradeExec(1
 
 AForm::AForm(const std::string & name, int gradeSign, int gradeExec): _name(name), _isSigned(false), _gradeSign(gradeSign), _gradeExec(gradeExec){
 
+	if(_gradeExec > 150 || _gradeSign > 150)
+		throw GradeTooLowException();
+	if (_gradeExec < 1 || _gradeSign < 1)
+		throw GradeTooHighException();
 }
 
 AForm::AForm(const AForm & obj){

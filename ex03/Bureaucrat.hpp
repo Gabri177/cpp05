@@ -1,7 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yugao <yugao@student.42madrid.com>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/13 09:51:16 by yugao             #+#    #+#             */
+/*   Updated: 2024/07/13 09:51:17 by yugao            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef HEAD_BUR_HPP
 # define HEAD_BUR_HPP
 # include <string>
 # include <iostream>
+# include <cstdlib>
 # include "AForm.hpp"
 
 

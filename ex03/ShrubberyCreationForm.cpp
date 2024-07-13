@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yugao <yugao@student.42madrid.com>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/13 09:51:35 by yugao             #+#    #+#             */
+/*   Updated: 2024/07/13 09:51:36 by yugao            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ShrubberyCreationForm.hpp"
 #include "fstream"
 
@@ -35,7 +47,7 @@ const std::string &						ShrubberyCreationForm::getTarget() const{
 
 void									ShrubberyCreationForm::drawTree() const{
 
-	std::ofstream ofile(_target + "_shrubbery");
+	std::ofstream ofile((_target + "_shrubbery").c_str());
 	if(!ofile.is_open()){
 
 		std::cerr << "Err: Could not open file: " << _target + "_shrubbery" << std::endl;
